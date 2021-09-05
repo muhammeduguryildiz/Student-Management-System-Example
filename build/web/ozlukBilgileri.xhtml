@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" lang="en"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <h:outputStylesheet library="css" name="button.css"></h:outputStylesheet>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="resources/js/scripts.js"></script>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+        <title>Öğrenci Özlük Bilgileri</title>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="resources/css/anaSayfaStyles.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
+
+        <!--Internal CSS-->
+        <style>
+
+            .bg-content {
+                background-color: #F2F2F2;
+            }
+            .bg-navbar {
+                background-color: #FFC312;
+            }
+        </style>
+
+    </h:head>
+    <h:body styleClass="bg-content">
+        <h:panelGroup layout="block" class="d-flex" id="wrapper" >
+            <!-- Sidebar-->
+            <h:panelGroup layout="block" class="border-end bg-white" id="sidebar-wrapper" style="background-color: #41464b !important ; color:white;" >
+                <h:panelGroup layout="block" class="list-group list-group-flush" >
+                    <h:panelGroup layout="block" class="sidebar-heading border-bottom bg-navbar" style="color:black;">Bilgi Yönetim Sistemi</h:panelGroup>
+                    <h:link class="list-group-item list-group-item-action list-group-item-light p-3"  style="background-color: #41464b !important ; color:white;" value="Özlük Bilgileri" outcome="ozlukBilgileri" />
+                    <h:link class="list-group-item list-group-item-action list-group-item-light p-3"  style="background-color: #41464b !important ; color:white;" value="Ders Notları" outcome="ogrenciDersNotlari" />
+                    <h:link class="list-group-item list-group-item-action list-group-item-light p-3"  style="background-color: #41464b !important ; color:white;" value="Ders Seçimi" outcome="dersSecimi" />
+                    <h:link class="list-group-item list-group-item-action list-group-item-light p-3"  style="background-color: #41464b !important ; color:white;" value="Çıkış Yap" outcome="index" />
+                </h:panelGroup>
+            </h:panelGroup>
+
+            <h:panelGroup layout="block" id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-navbar border-bottom">
+                    <h:panelGroup layout="block" class="container-fluid" >
+                        <h:panelGroup layout="block" class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link" href="anaSayfa.xhtml">Ana Sayfa</a></li>
+                                <!--<li class="nav-item"><a class="nav-link" href="#!">Link</a></li>-->
+                                <li class="nav-item active"><a class="nav-link" href="index.xhtml">Oturum Kapat</a></li>
+                            </ul>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                </nav>
+
+                <!-- Page content wrapper-->
+                <h:panelGroup class="container">
+                    <!-- Sayfa İçeriğinin Başla -->
+                    <!-- Pines Notify Gelecek -->
+
+
+
+
+                    <h:panelGroup  class="panel panel-primary">
+                        <h:panelGroup class="panel-heading" style="margin-right:50px;">
+                            <h4 style="margin-left: 50px; margin-top: 100px;">Özlük Bilgileri</h4>
+                            <h:panelGroup  class="options">
+                            </h:panelGroup>
+                        </h:panelGroup>
+                        <h:panelGroup  class="panel-body">
+                            <h:panelGroup style="margin-top:20px;" class="row">
+                                <h:panelGroup class="col-md-12">
+                                    <h:panelGroup class="panel panel-midnightblue">
+                                        <h:panelGroup class="panel-body">
+                                            <h:panelGroup class="row">
+                                                <h:panelGroup class="col-md-3 text-center">
+                                                    <img style="margin-right:20px;margin-bottom: 15px;" src="#{ozlukBean.cinsiyet_check()}" width="200" height="150" />
+                                                </h:panelGroup>
+
+                                                <h:panelGroup class="col-md-9">
+                                                    <h:panelGroup class="row row-gapped">
+                                                        <h:panelGroup class="col-md-6">
+
+                                                            <h:panelGroup class="form-inline">
+                                                                <h:panelGroup class="form-group">
+
+                                                                    <div class="info-input">Adı: #{ozlukBean.ad} </div>
+                                                                </h:panelGroup>
+                                                            </h:panelGroup>
+                                                            <h:panelGroup class="form-inline ">
+                                                                <h:panelGroup class="form-group">
+                                                                    <div  class="info-input">Soyadı: #{ozlukBean.soyad}</div>
+                                                                </h:panelGroup>
+                                                            </h:panelGroup>
+                                                            <h:panelGroup class="form-inline">
+                                                                <h:panelGroup class="form-group">
+                                                                    <div class="info-input">Kimlik Numarası: #{giris.tc_no} </div>
+                                                                </h:panelGroup>
+                                                            </h:panelGroup>
+
+                                                        </h:panelGroup>
+                                                        <h:panelGroup class="col-md-6">
+
+                                                            <h:panelGroup class="form-inline">
+                                                                <h:panelGroup class="form-group">
+                                                                    <div  class="info-input">Baba Adı: #{ozlukBean.baba_adi}</div>
+                                                                </h:panelGroup>
+                                                            </h:panelGroup>
+                                                            <h:panelGroup class="form-inline">
+                                                                <h:panelGroup class="form-group">
+                                                                    <div class="info-input">Anne Adı: #{ozlukBean.anne_adi}</div>
+                                                                </h:panelGroup>
+                                                            </h:panelGroup>
+
+                                                            <h:panelGroup class="form-inline">
+                                                                <h:panelGroup class="form-group">
+                                                                    <div class="info-input">Öğrenci Numarası: #{ozlukBean.ogrenciNo}</div>
+                                                                </h:panelGroup>
+                                                            </h:panelGroup>
+
+                                                        </h:panelGroup>
+
+                                                    </h:panelGroup>
+                                                    <hr />
+                                                    <h:panelGroup class="row row-gapped">
+
+                                                        <h:panelGroup class="col-md-6">
+
+                                                            <h:panelGroup class="form-inline">
+                                                                <h:panelGroup class="form-group">
+                                                                    <label class="label-main">Doğum Tarihi:</label>
+                                                                    <span class="info-input">#{ozlukBean.tarih}</span>
+                                                                </h:panelGroup>
+                                                            </h:panelGroup>
+                                                        </h:panelGroup>
+                                                        <h:panelGroup class="col-md-6">
+                                                            <h:panelGroup class="form-inline">
+                                                                <h:panelGroup class="form-group">
+                                                                    <label class="label-main">Cinsiyet:</label>
+                                                                    <span class="info-input">#{ozlukBean.cinsiyet}</span>
+                                                                </h:panelGroup>
+                                                            </h:panelGroup>
+                                                        </h:panelGroup>
+                                                    </h:panelGroup>
+
+
+                                                </h:panelGroup>
+
+                                            </h:panelGroup>
+
+                                            <hr />
+                                        </h:panelGroup>
+                                    </h:panelGroup>
+                                </h:panelGroup>
+                            </h:panelGroup>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                </h:panelGroup>
+
+                <h:form>
+                    
+                    <h:panelGroup class="input-group form-group">
+                        <h:panelGroup class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </h:panelGroup>
+                        <h:inputSecret id="yenisifre" value="#{ozlukBean.yenisifre}" class="form-control" p:placeholder="Yeni Şifre"/>
+                    </h:panelGroup>
+
+                    <h:panelGroup class="form-group">
+                        <h:commandButton id="sifrebtn" style="width: 200px;" class="btn float-right login_btn" value="Şifre Güncelle" action="#{ozlukBean.Sifre_guncelle()}" />
+                        <h:message for="yenisifre" style="color: #FFC312;font-size:15px;"/>
+                        <h:messages globalOnly="true" style="color: #FFC312;font-size:15px;"/>
+                    </h:panelGroup>
+
+                </h:form>
+
+            </h:panelGroup>
+        </h:panelGroup>
+        
+    </h:body>
+</html>

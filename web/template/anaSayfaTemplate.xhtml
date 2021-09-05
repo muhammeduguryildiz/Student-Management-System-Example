@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" lang="en"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="resources/js/scripts.js"></script>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+        <title>Ana sayfa başlık</title>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="resources/css/anaSayfaStyles.css" rel="stylesheet"/>
+
+        <!--Internal CSS-->
+        <style>
+            .bg-content {
+                background-color: #F2F2F2;
+            }
+            .bg-navbar {
+                background-color: #FFC312;
+            }
+        </style>
+
+    </h:head>
+    <h:body styleClass="bg-content">
+        <h:panelGroup layout="block" class="d-flex" id="wrapper" >
+            <!-- Sidebar-->
+            <h:panelGroup layout="block" class="border-end bg-white" id="sidebar-wrapper" style="background-color: #41464b !important ; color:white;" >
+                <h:panelGroup layout="block" class="list-group list-group-flush" >
+                    <h:panelGroup layout="block" class="sidebar-heading border-bottom bg-navbar" style="color:black;">Bilgi Yönetim Sistemi</h:panelGroup>
+                    <h:link class="list-group-item list-group-item-action list-group-item-light p-3"  style="background-color: #41464b !important ; color:white;" value="Özlük Bilgileri" outcome="ozlukBilgileri" />
+                    <h:link class="list-group-item list-group-item-action list-group-item-light p-3"  style="background-color: #41464b !important ; color:white;" value="Ders Programı" outcome="index" />
+                    <h:link class="list-group-item list-group-item-action list-group-item-light p-3"  style="background-color: #41464b !important ; color:white;" value="Ders Notları" outcome="index" />
+                    <h:link class="list-group-item list-group-item-action list-group-item-light p-3"  style="background-color: #41464b !important ; color:white;" value="Ders Seçimi" outcome="index" />
+                    <h:link class="list-group-item list-group-item-action list-group-item-light p-3"  style="background-color: #41464b !important ; color:white;" value="Bilgileri Güncelle" outcome="index" />
+                    <h:link class="list-group-item list-group-item-action list-group-item-light p-3"  style="background-color: #41464b !important ; color:white;" value="Çıkış Yap" outcome="index" />
+                    <!--<a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shortcuts</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>-->
+                </h:panelGroup>
+            </h:panelGroup>
+            <!-- Page content wrapper-->
+            <h:panelGroup layout="block" id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-navbar border-bottom">
+                    <h:panelGroup layout="block" class="container-fluid" >
+                        <h:panelGroup layout="block" class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link" href="anaSayfa.xhtml">Ana Sayfa</a></li>
+                                <!--<li class="nav-item"><a class="nav-link" href="#!">Link</a></li>-->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menü</a>
+                                    <h:panelGroup layout="block" class="dropdown-menu dropdown-menu-end" >
+                                        <a class="dropdown-item" href="#!">Action</a>
+                                        <a class="dropdown-item" href="#!">Another action</a>
+                                        <h:panelGroup class="dropdown-divider"></h:panelGroup>
+                                        <a class="dropdown-item" href="#!">Something else here</a>
+                                    </h:panelGroup>
+                                </li>
+                            </ul>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                </nav>
+                <!-- Page content-->
+            </h:panelGroup>
+        </h:panelGroup>
+
+    </h:body>
+</html>
